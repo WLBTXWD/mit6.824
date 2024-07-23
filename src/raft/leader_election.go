@@ -110,6 +110,7 @@ func (rf *Raft) leaderAppendEntry(peerId int, sendHeartBeat bool) {
 	// 如果不对，return false 那么leader就会decrement nextIndex[peerId]
 	prev_log_idx := rf.nextIndex[peerId] - 1
 	prev_log_term := rf.logs[prev_log_idx].Term
+	record_n_log := len(rf.logs)
 	args := AppendEntriesArgs{rf.currentTerm, rf.me, prev_log_idx, prev_log_term, []LogEntry{}, rf.commitIndex}
 	reply := AppendEntriesReply{}
 	// follower i 应该增加的条目是:从 nextIndex[peerId]开始，到last log index结束的所有logentry
@@ -151,8 +152,8 @@ func (rf *Raft) leaderAppendEntry(peerId int, sendHeartBeat bool) {
 	// 如果成功，说明完全同步了（任何不同步的log entry，以及所有之后的entry都删掉了
 	if reply.Success {
 		// success, update nextIndex and matchIndex for follower
-		rf.nextIndex[peerId] = len(rf.logs)      // 就是当前leader的log最大idx + 1
-		rf.matchIndex[peerId] = len(rf.logs) - 1 // 就是当前leader的log最大idx
+		rf.nextIndex[peerId] = record_n_log      // 就是当前leader的log最大idx + 1
+		rf.matchIndex[peerId] = record_n_log - 1 // 就是当前leader的log最大idx
 		if sendHeartBeat {
 			DPrintf("Leader %d update the follower %d via heartbeat, now it's nextIndex is %d\n", rf.me, peerId, rf.nextIndex[peerId])
 		} else {
