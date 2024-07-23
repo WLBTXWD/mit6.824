@@ -1,0 +1,141 @@
+2024/07/24 00:05:27 Start a new peer, total peers: 3
+2024/07/24 00:05:27 Start a new peer, total peers: 3
+2024/07/24 00:05:27 Start a new peer, total peers: 3
+Test (2B): basic agreement ...
+2024/07/24 00:05:27 Peer 2 electionTimer reach out, now is 2024-07-24 00:05:27.235570792 +0800 CST m=+0.222678503
+2024/07/24 00:05:27 peer 2 start leaderElection
+2024/07/24 00:05:27 Candidate 2 start to send voteRequest to 1
+2024/07/24 00:05:27 Candidate 2 start to send voteRequest to 0
+2024/07/24 00:05:27 follower 1 receive requestVote with larger term from candidate 2
+2024/07/24 00:05:27 follower 1 vote for candidate 2
+2024/07/24 00:05:27 Candidate 2 receives voteResponse from 1
+2024/07/24 00:05:27 Candidate 2 receive a vote from 1
+2024/07/24 00:05:27 Candidate 2 receive enough votes in term 1
+2024/07/24 00:05:27 Leader 2 start send heartbeat
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/24 00:05:27 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/24 00:05:27 Leader 2 update the follower 1 via heartbeat, now it's nextIndex is 2
+2024/07/24 00:05:27 follower 0 receive requestVote with larger term from candidate 2
+2024/07/24 00:05:27 follower 0 vote for candidate 2
+2024/07/24 00:05:27 Candidate 2 receives voteResponse from 0
+2024/07/24 00:05:27 Peer 2 is no longer candidate, now is 2
+2024/07/24 00:05:27 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/24 00:05:27 Leader 2 update the follower 0 via heartbeat, now it's nextIndex is 2
+2024/07/24 00:05:27 leader 2 receives a new log entry, the command is 100, idx is 1
+2024/07/24 00:05:27 Leader 2 start send AppendEntries
+2024/07/24 00:05:27 Leader 2 start send heartbeat
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 1
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 1
+2024/07/24 00:05:27 Follower 1's last log index 0 is smaller than args.PrevLogIndex 1
+2024/07/24 00:05:27 peer 1's nextIndex decrement to 1
+2024/07/24 00:05:27 peer 1 append entry failed, retry
+2024/07/24 00:05:27 Leader 2 start send appendEntries to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendEntry args for follower 1, prev_idx is 0
+2024/07/24 00:05:27 Follower 0's last log index 0 is smaller than args.PrevLogIndex 1
+2024/07/24 00:05:27 peer 0's nextIndex decrement to 1
+2024/07/24 00:05:27 peer 0 append entry failed, retry
+2024/07/24 00:05:27 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/24 00:05:27 Follower 1 add a new command {100 1}
+2024/07/24 00:05:27 Leader 2 start send appendEntries to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendEntry args for follower 0, prev_idx is 0
+2024/07/24 00:05:27 Leader 2 update the follower 1 via appendEntry, now it's nextIndex is 2
+2024/07/24 00:05:27 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/24 00:05:27 Follower 0 add a new command {100 1}
+2024/07/24 00:05:27 Leader 2 update the follower 0 via appendEntry, now it's nextIndex is 2
+2024/07/24 00:05:27 Leader 2 start send heartbeat
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 1
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 1
+2024/07/24 00:05:27 Follower 1 passes consistency check for prev_log_idx 1
+2024/07/24 00:05:27 Follower 0 passes consistency check for prev_log_idx 1
+2024/07/24 00:05:27 Leader 2 update the follower 1 via heartbeat, now it's nextIndex is 3
+2024/07/24 00:05:27 Leader 2 update the follower 0 via heartbeat, now it's nextIndex is 3
+2024/07/24 00:05:27 leader 2 receives a new log entry, the command is 200, idx is 2
+2024/07/24 00:05:27 Leader 2 start send AppendEntries
+2024/07/24 00:05:27 Leader 2 start send heartbeat
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 2
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 2
+2024/07/24 00:05:27 Follower 1's last log index 1 is smaller than args.PrevLogIndex 2
+2024/07/24 00:05:27 Follower 0's last log index 1 is smaller than args.PrevLogIndex 2
+2024/07/24 00:05:27 peer 1's nextIndex decrement to 2
+2024/07/24 00:05:27 peer 1 append entry failed, retry
+2024/07/24 00:05:27 Leader 2 start send appendEntries to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendEntry args for follower 1, prev_idx is 1
+2024/07/24 00:05:27 peer 0's nextIndex decrement to 2
+2024/07/24 00:05:27 peer 0 append entry failed, retry
+2024/07/24 00:05:27 Leader 2 start send appendEntries to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendEntry args for follower 0, prev_idx is 1
+2024/07/24 00:05:27 Follower 0 passes consistency check for prev_log_idx 1
+2024/07/24 00:05:27 Follower 0 add a new command {200 1}
+2024/07/24 00:05:27 Follower 1 passes consistency check for prev_log_idx 1
+2024/07/24 00:05:27 Follower 1 add a new command {200 1}
+2024/07/24 00:05:27 Leader 2 update the follower 0 via appendEntry, now it's nextIndex is 3
+2024/07/24 00:05:27 Leader 2 update the follower 1 via appendEntry, now it's nextIndex is 3
+2024/07/24 00:05:27 Leader 2 start send heartbeat
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 2
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 2
+2024/07/24 00:05:27 Follower 1 passes consistency check for prev_log_idx 2
+2024/07/24 00:05:27 Leader 2 update the follower 1 via heartbeat, now it's nextIndex is 4
+2024/07/24 00:05:27 Follower 0 passes consistency check for prev_log_idx 2
+2024/07/24 00:05:27 Leader 2 update the follower 0 via heartbeat, now it's nextIndex is 4
+2024/07/24 00:05:27 leader 2 receives a new log entry, the command is 300, idx is 3
+2024/07/24 00:05:27 Leader 2 start send AppendEntries
+2024/07/24 00:05:27 Leader 2 start send heartbeat
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 3
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 3
+2024/07/24 00:05:27 Follower 0's last log index 2 is smaller than args.PrevLogIndex 3
+2024/07/24 00:05:27 peer 0's nextIndex decrement to 3
+2024/07/24 00:05:27 peer 0 append entry failed, retry
+2024/07/24 00:05:27 Leader 2 start send appendEntries to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendEntry args for follower 0, prev_idx is 2
+2024/07/24 00:05:27 Follower 0 passes consistency check for prev_log_idx 2
+2024/07/24 00:05:27 Follower 0 add a new command {300 1}
+2024/07/24 00:05:27 Leader 2 update the follower 0 via appendEntry, now it's nextIndex is 4
+2024/07/24 00:05:27 Follower 1's last log index 2 is smaller than args.PrevLogIndex 3
+2024/07/24 00:05:27 peer 1's nextIndex decrement to 3
+2024/07/24 00:05:27 peer 1 append entry failed, retry
+2024/07/24 00:05:27 Leader 2 start send appendEntries to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendEntry args for follower 1, prev_idx is 2
+2024/07/24 00:05:27 Follower 1 passes consistency check for prev_log_idx 2
+2024/07/24 00:05:27 Follower 1 add a new command {300 1}
+2024/07/24 00:05:27 Leader 2 update the follower 1 via appendEntry, now it's nextIndex is 4
+2024/07/24 00:05:27 Leader 2 start send heartbeat
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 1
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 3
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 0
+2024/07/24 00:05:27 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 3
+2024/07/24 00:05:27 Follower 1 passes consistency check for prev_log_idx 3
+2024/07/24 00:05:27 Leader 2 update the follower 1 via heartbeat, now it's nextIndex is 5
+2024/07/24 00:05:27 Follower 0 passes consistency check for prev_log_idx 3
+2024/07/24 00:05:27 Leader 2 update the follower 0 via heartbeat, now it's nextIndex is 5
+  ... Passed --   0.8  3   22    5746    3
+2024/07/24 00:05:27 Tester call Kill() to peer: 0
+2024/07/24 00:05:27 Tester call Kill() to peer: 1
+2024/07/24 00:05:27 Tester call Kill() to peer: 2
+2024/07/24 00:05:27 Start a new peer, total peers: 3
+2024/07/24 00:05:27 Start a new peer, total peers: 3
+2024/07/24 00:05:27 Start a new peer, total peers: 3
+Test (2B): RPC byte count ...
+2024/07/24 00:05:27 Leader 2 start send heartbeat
+2024/07/24 00:05:27 Leader 2 start send heartbeat to follower 1
+panic: runtime error: index out of range [4] with length 4
+
+goroutine 64 [running]:
+_/home/ubuntu/Projs/MIT6824/6824_go_self/src/raft.(*Raft).leaderAppendEntry(0xc0000f0180, 0x1, 0x1)
+	/home/ubuntu/Projs/MIT6824/6824_go_self/src/raft/leader_election.go:105 +0x11ec
+created by _/home/ubuntu/Projs/MIT6824/6824_go_self/src/raft.(*Raft).leaderAppendEntries
+	/home/ubuntu/Projs/MIT6824/6824_go_self/src/raft/leader_election.go:82 +0x267
+exit status 2
+FAIL	_/home/ubuntu/Projs/MIT6824/6824_go_self/src/raft	0.929s

@@ -1,0 +1,781 @@
+disconnect(0)
+2024/07/23 19:15:41 Start a new peer, total peers: 3
+disconnect(1)
+2024/07/23 19:15:41 Start a new peer, total peers: 3
+disconnect(2)
+2024/07/23 19:15:41 Start a new peer, total peers: 3
+connect(0)
+connect(1)
+connect(2)
+Test (2A): initial election ...
+2024/07/23 19:15:41 Peer 2 electionTimer reach out, now is 2024-07-23 19:15:41.935626247 +0800 CST m=+0.275298798
+2024/07/23 19:15:41 peer 2 start leaderElection
+2024/07/23 19:15:41 Candidate 2 start to send voteRequest to 0
+2024/07/23 19:15:41 Candidate 2 start to send voteRequest to 1
+2024/07/23 19:15:41 follower 0 receive requestVote with larger term from candidate 2
+2024/07/23 19:15:41 follower 0 vote for candidate 2
+2024/07/23 19:15:41 Candidate 2 receives voteResponse from 0
+2024/07/23 19:15:41 Candidate 2 receive a vote from 0
+2024/07/23 19:15:41 Candidate 2 receive enough votes in term 1
+2024/07/23 19:15:41 Leader 2 start send heartbeat
+2024/07/23 19:15:41 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:41 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:41 HeatBeat: follower 1 receive requestVote with larger term from leader 2
+2024/07/23 19:15:41 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:41 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:41 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:41 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:41 follower 1 receive requestVote with larger term from candidate 2
+2024/07/23 19:15:41 follower 1 vote for candidate 2
+2024/07/23 19:15:41 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:41 Candidate 2 receives voteResponse from 1
+2024/07/23 19:15:41 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:41 Peer 2 is no longer candidate, now is 2
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:42 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:42 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:42 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:42 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:42 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:43 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:43 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:43 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:43 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:43 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 start send heartbeat
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:44 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:44 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 start send heartbeat
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:44 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 start send heartbeat
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:44 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:44 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 start send heartbeat
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:44 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 start send heartbeat
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:44 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 start send heartbeat
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:44 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 start send heartbeat
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:44 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+  ... Passed --   3.1  3   58   15106    0
+2024/07/23 19:15:44 Tester call Kill() to peer: 0
+2024/07/23 19:15:44 Tester call Kill() to peer: 1
+2024/07/23 19:15:44 Tester call Kill() to peer: 2
+disconnect(0)
+2024/07/23 19:15:44 Start a new peer, total peers: 3
+disconnect(1)
+2024/07/23 19:15:44 Start a new peer, total peers: 3
+disconnect(2)
+2024/07/23 19:15:44 Start a new peer, total peers: 3
+connect(0)
+connect(1)
+connect(2)
+Test (2A): election after network failure ...
+2024/07/23 19:15:44 Leader 2 start send heartbeat
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:44 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:44 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:44 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:44 Leader 2 send heartbeat failed to follower 0
+2024/07/23 19:15:44 Peer 1 electionTimer reach out, now is 2024-07-23 19:15:44.874933375 +0800 CST m=+3.214605945
+2024/07/23 19:15:44 peer 1 start leaderElection
+2024/07/23 19:15:44 Candidate 1 start to send voteRequest to 2
+2024/07/23 19:15:44 Cnadidate 1 Cannot send request vote to 2
+2024/07/23 19:15:44 Candidate 1 start to send voteRequest to 0
+2024/07/23 19:15:44 Cnadidate 1 Cannot send request vote to 0
+2024/07/23 19:15:44 Peer 0 electionTimer reach out, now is 2024-07-23 19:15:44.882005835 +0800 CST m=+3.221678371
+2024/07/23 19:15:44 peer 0 start leaderElection
+2024/07/23 19:15:44 Candidate 0 start to send voteRequest to 1
+2024/07/23 19:15:44 Cnadidate 0 Cannot send request vote to 1
+2024/07/23 19:15:44 Candidate 0 start to send voteRequest to 2
+2024/07/23 19:15:44 Cnadidate 0 Cannot send request vote to 2
+2024/07/23 19:15:44 Peer 1 electionTimer reach out, now is 2024-07-23 19:15:44.92234793 +0800 CST m=+3.262020428
+2024/07/23 19:15:44 peer 1 start leaderElection
+2024/07/23 19:15:44 Candidate 1 start to send voteRequest to 2
+2024/07/23 19:15:44 Candidate 1 start to send voteRequest to 0
+2024/07/23 19:15:44 follower 2 receive requestVote with larger term from candidate 1
+2024/07/23 19:15:44 follower 2 vote for candidate 1
+2024/07/23 19:15:44 follower 0 receive requestVote with larger term from candidate 1
+2024/07/23 19:15:44 follower 0 vote for candidate 1
+2024/07/23 19:15:44 Candidate 1 receives voteResponse from 2
+2024/07/23 19:15:44 Candidate 1 receive a vote from 2
+2024/07/23 19:15:44 Candidate 1 receive enough votes in term 1
+2024/07/23 19:15:44 Leader 1 start send heartbeat
+2024/07/23 19:15:44 Leader 1 start send heartbeat to follower 2
+2024/07/23 19:15:44 Leader 1 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:44 Candidate 1 receives voteResponse from 0
+2024/07/23 19:15:44 Peer 1 is no longer candidate, now is 2
+2024/07/23 19:15:44 Leader 1 start send heartbeat to follower 0
+2024/07/23 19:15:44 Leader 1 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:44 Follower 2 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:44 Leader 1 receive heartbeat response from follower 2, now it's nextIndex is 1
+2024/07/23 19:15:44 Leader 1 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 1 start send heartbeat
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 2
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:45 Follower 2 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 1 receive heartbeat response from follower 2, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 1 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 1 start send heartbeat
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 2
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Follower 2 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 1 receive heartbeat response from follower 2, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 1 receive heartbeat response from follower 0, now it's nextIndex is 1
+disconnect(1)
+2024/07/23 19:15:45 Leader 1 start send heartbeat
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 2
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Leader 1 start send heartbeat
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 2
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Peer 2 electionTimer reach out, now is 2024-07-23 19:15:45.407577912 +0800 CST m=+3.747250474
+2024/07/23 19:15:45 peer 2 start leaderElection
+2024/07/23 19:15:45 Candidate 2 start to send voteRequest to 0
+2024/07/23 19:15:45 Candidate 2 start to send voteRequest to 1
+2024/07/23 19:15:45 follower 0 receive requestVote with larger term from candidate 2
+2024/07/23 19:15:45 follower 0 vote for candidate 2
+2024/07/23 19:15:45 Candidate 2 receives voteResponse from 0
+2024/07/23 19:15:45 Candidate 2 receive a vote from 0
+2024/07/23 19:15:45 Candidate 2 receive enough votes in term 2
+2024/07/23 19:15:45 Leader 2 start send heartbeat
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 1 start send heartbeat
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 2
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Leader 2 start send heartbeat
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 1 start send heartbeat
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 2
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Leader 2 start send heartbeat
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 1 start send heartbeat
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 2
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Leader 2 start send heartbeat
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+connect(1)
+2024/07/23 19:15:45 Leader 1 start send heartbeat
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 2
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:45 Leader 1 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 1 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 HeatBeat: follower 2 receive requestVote with smaller term from leader 1
+2024/07/23 19:15:45 HeatBeat: follower 0 receive requestVote with smaller term from leader 1
+2024/07/23 19:15:45 Leader 1 receive heartbeat response from follower 2, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 1's termIdx is smaller, switch to follower
+2024/07/23 19:15:45 Leader 1 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:45 peer 0's nextIndex decrement to 0
+2024/07/23 19:15:45 peer 0 append entry failed, retry
+2024/07/23 19:15:45 peer 1 is not leader any longer
+2024/07/23 19:15:45 Leader 2 start send heartbeat
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:45 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 2 start send heartbeat
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:45 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:45 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:45 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:45 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:45 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:46 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:46 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:46 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:46 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:46 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:46 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:46 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:46 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:46 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:46 Follower 0 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:46 Leader 2 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:46 Leader 2 receive heartbeat response from follower 0, now it's nextIndex is 1
+disconnect(2)
+disconnect(0)
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:46 Peer 0 electionTimer reach out, now is 2024-07-23 19:15:46.418072594 +0800 CST m=+4.757745114
+2024/07/23 19:15:46 peer 0 start leaderElection
+2024/07/23 19:15:46 Candidate 0 start to send voteRequest to 2
+2024/07/23 19:15:46 Candidate 0 start to send voteRequest to 1
+2024/07/23 19:15:46 Peer 1 electionTimer reach out, now is 2024-07-23 19:15:46.488946139 +0800 CST m=+4.828618640
+2024/07/23 19:15:46 peer 1 start leaderElection
+2024/07/23 19:15:46 Candidate 1 start to send voteRequest to 2
+2024/07/23 19:15:46 Candidate 1 start to send voteRequest to 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:46 Peer 1 electionTimer reach out, now is 2024-07-23 19:15:46.697223234 +0800 CST m=+5.036895776
+2024/07/23 19:15:46 peer 1 start leaderElection
+2024/07/23 19:15:46 Candidate 1 start to send voteRequest to 2
+2024/07/23 19:15:46 Candidate 1 start to send voteRequest to 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:46 Peer 0 electionTimer reach out, now is 2024-07-23 19:15:46.717246289 +0800 CST m=+5.056918845
+2024/07/23 19:15:46 peer 0 start leaderElection
+2024/07/23 19:15:46 Candidate 0 start to send voteRequest to 2
+2024/07/23 19:15:46 Candidate 0 start to send voteRequest to 1
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:46 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:46 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Peer 1 electionTimer reach out, now is 2024-07-23 19:15:47.001398035 +0800 CST m=+5.341070645
+2024/07/23 19:15:47 peer 1 start leaderElection
+2024/07/23 19:15:47 Candidate 1 start to send voteRequest to 2
+2024/07/23 19:15:47 Candidate 1 start to send voteRequest to 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Peer 0 electionTimer reach out, now is 2024-07-23 19:15:47.018458803 +0800 CST m=+5.358131302
+2024/07/23 19:15:47 peer 0 start leaderElection
+2024/07/23 19:15:47 Candidate 0 start to send voteRequest to 2
+2024/07/23 19:15:47 Candidate 0 start to send voteRequest to 1
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Peer 1 electionTimer reach out, now is 2024-07-23 19:15:47.301598023 +0800 CST m=+5.641270577
+2024/07/23 19:15:47 peer 1 start leaderElection
+2024/07/23 19:15:47 Candidate 1 start to send voteRequest to 2
+2024/07/23 19:15:47 Candidate 1 start to send voteRequest to 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Peer 0 electionTimer reach out, now is 2024-07-23 19:15:47.352649747 +0800 CST m=+5.692322304
+2024/07/23 19:15:47 peer 0 start leaderElection
+2024/07/23 19:15:47 Candidate 0 start to send voteRequest to 2
+2024/07/23 19:15:47 Candidate 0 start to send voteRequest to 1
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Leader 1 send heartbeat failed to follower 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:47 Peer 0 electionTimer reach out, now is 2024-07-23 19:15:47.583848192 +0800 CST m=+5.923520766
+2024/07/23 19:15:47 peer 0 start leaderElection
+2024/07/23 19:15:47 Candidate 0 start to send voteRequest to 2
+2024/07/23 19:15:47 Candidate 0 start to send voteRequest to 1
+2024/07/23 19:15:47 Cnadidate 0 Cannot send request vote to 2
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:47 Peer 1 electionTimer reach out, now is 2024-07-23 19:15:47.64178169 +0800 CST m=+5.981454230
+2024/07/23 19:15:47 peer 1 start leaderElection
+2024/07/23 19:15:47 Candidate 1 start to send voteRequest to 2
+2024/07/23 19:15:47 Candidate 1 start to send voteRequest to 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Peer 0 electionTimer reach out, now is 2024-07-23 19:15:47.795055844 +0800 CST m=+6.134728385
+2024/07/23 19:15:47 peer 0 start leaderElection
+2024/07/23 19:15:47 Candidate 0 start to send voteRequest to 2
+2024/07/23 19:15:47 Candidate 0 start to send voteRequest to 1
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Peer 1 electionTimer reach out, now is 2024-07-23 19:15:47.883032274 +0800 CST m=+6.222704835
+2024/07/23 19:15:47 peer 1 start leaderElection
+2024/07/23 19:15:47 Candidate 1 start to send voteRequest to 2
+2024/07/23 19:15:47 Candidate 1 start to send voteRequest to 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:47 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:47 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:47 Cnadidate 1 Cannot send request vote to 2
+2024/07/23 19:15:47 Cnadidate 0 Cannot send request vote to 1
+2024/07/23 19:15:48 Peer 0 electionTimer reach out, now is 2024-07-23 19:15:48.01827496 +0800 CST m=+6.357947464
+2024/07/23 19:15:48 peer 0 start leaderElection
+2024/07/23 19:15:48 Candidate 0 start to send voteRequest to 2
+2024/07/23 19:15:48 Candidate 0 start to send voteRequest to 1
+2024/07/23 19:15:48 Leader 2 start send heartbeat
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:48 Peer 1 electionTimer reach out, now is 2024-07-23 19:15:48.090240896 +0800 CST m=+6.429913441
+2024/07/23 19:15:48 peer 1 start leaderElection
+2024/07/23 19:15:48 Candidate 1 start to send voteRequest to 2
+2024/07/23 19:15:48 Candidate 1 start to send voteRequest to 0
+2024/07/23 19:15:48 Leader 2 start send heartbeat
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:48 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:48 Leader 1 send heartbeat failed to follower 0
+2024/07/23 19:15:48 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:48 Leader 2 start send heartbeat
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+connect(0)
+2024/07/23 19:15:48 Peer 0 electionTimer reach out, now is 2024-07-23 19:15:48.304627243 +0800 CST m=+6.644299746
+2024/07/23 19:15:48 peer 0 start leaderElection
+2024/07/23 19:15:48 Candidate 0 start to send voteRequest to 2
+2024/07/23 19:15:48 Candidate 0 start to send voteRequest to 1
+2024/07/23 19:15:48 follower 1 receive requestVote with larger term from candidate 0
+2024/07/23 19:15:48 follower 1 vote for candidate 0
+2024/07/23 19:15:48 Candidate 0 receives voteResponse from 1
+2024/07/23 19:15:48 Candidate 0 receive a vote from 1
+2024/07/23 19:15:48 Candidate 0 receive enough votes in term 10
+2024/07/23 19:15:48 Leader 0 start send heartbeat
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:48 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:48 Leader 2 start send heartbeat
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:48 Leader 0 start send heartbeat
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:48 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:48 Leader 2 start send heartbeat
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:48 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:48 Leader 0 start send heartbeat
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:48 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:48 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:48 Leader 2 start send heartbeat
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:48 Leader 1 send heartbeat failed to follower 0
+2024/07/23 19:15:48 Leader 2 send heartbeat failed to follower 0
+2024/07/23 19:15:48 Leader 0 start send heartbeat
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:48 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:48 Leader 2 start send heartbeat
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+2024/07/23 19:15:48 Cnadidate 0 Cannot send request vote to 2
+2024/07/23 19:15:48 Peer 0 is no longer candidate, now is 2
+2024/07/23 19:15:48 Leader 0 start send heartbeat
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:48 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:48 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:48 Leader 2 start send heartbeat
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Leader 2 start send heartbeat to follower 0
+2024/07/23 19:15:48 Leader 2 fill in the sendHeartbeat args for follower 0, prev_idx is 0
+connect(2)
+2024/07/23 19:15:48 Leader 0 start send heartbeat
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:48 HeatBeat: follower 2 receive requestVote with larger term from leader 0
+2024/07/23 19:15:48 Follower 2 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:48 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:48 Leader 0 receive heartbeat response from follower 2, now it's nextIndex is 1
+2024/07/23 19:15:48 Cnadidate 0 Cannot send request vote to 2
+2024/07/23 19:15:48 Peer 0 is no longer candidate, now is 2
+2024/07/23 19:15:48 Leader 0 start send heartbeat
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:48 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:48 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:48 HeatBeat: follower 2 receive requestVote with larger term from leader 0
+2024/07/23 19:15:48 Follower 2 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:48 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:48 Leader 0 receive heartbeat response from follower 2, now it's nextIndex is 1
+2024/07/23 19:15:48 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:48 Leader 2 send heartbeat failed to follower 1
+2024/07/23 19:15:49 Leader 0 start send heartbeat
+2024/07/23 19:15:49 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:49 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:49 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:49 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:49 HeatBeat: follower 2 receive requestVote with larger term from leader 0
+2024/07/23 19:15:49 Follower 2 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:49 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:49 Leader 0 receive heartbeat response from follower 2, now it's nextIndex is 1
+2024/07/23 19:15:49 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:49 Leader 0 start send heartbeat
+2024/07/23 19:15:49 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:49 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:49 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:49 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:49 HeatBeat: follower 2 receive requestVote with larger term from leader 0
+2024/07/23 19:15:49 Follower 2 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:49 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:49 Leader 0 receive heartbeat response from follower 2, now it's nextIndex is 1
+2024/07/23 19:15:49 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:49 Leader 0 send heartbeat failed to follower 2
+2024/07/23 19:15:49 Leader 2 send heartbeat failed to follower 0
+2024/07/23 19:15:49 Leader 0 start send heartbeat
+2024/07/23 19:15:49 Leader 0 start send heartbeat to follower 2
+2024/07/23 19:15:49 Leader 0 fill in the sendHeartbeat args for follower 2, prev_idx is 0
+2024/07/23 19:15:49 Leader 0 start send heartbeat to follower 1
+2024/07/23 19:15:49 Leader 0 fill in the sendHeartbeat args for follower 1, prev_idx is 0
+2024/07/23 19:15:49 HeatBeat: follower 2 receive requestVote with larger term from leader 0
+2024/07/23 19:15:49 Follower 2 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:49 Follower 1 passes consistency check for prev_log_idx 0
+2024/07/23 19:15:49 Leader 0 receive heartbeat response from follower 2, now it's nextIndex is 1
+2024/07/23 19:15:49 Leader 0 receive heartbeat response from follower 1, now it's nextIndex is 1
+2024/07/23 19:15:49 Cnadidate 1 Cannot send request vote to 0
+2024/07/23 19:15:49 Peer 1 is no longer candidate, now is 0
+  ... Passed --   4.6  3  140   27208    0
+2024/07/23 19:15:49 Tester call Kill() to peer: 0
+2024/07/23 19:15:49 Tester call Kill() to peer: 1
+2024/07/23 19:15:49 Tester call Kill() to peer: 2
+PASS
+ok  	_/home/ubuntu/Projs/MIT6824/6824_go_self/src/raft	7.632s
