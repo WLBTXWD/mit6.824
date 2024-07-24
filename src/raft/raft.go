@@ -18,11 +18,14 @@ package raft
 //
 
 import (
+	"bytes"
+	"log"
 	"math/rand"
 	"sync"
 	"sync/atomic"
 	"time"
 
+	"../labgob"
 	"../labrpc"
 )
 
@@ -115,12 +118,14 @@ func (rf *Raft) GetState() (int, bool) {
 func (rf *Raft) persist() {
 	// Your code here (2C).
 	// Example:
-	// w := new(bytes.Buffer)
-	// e := labgob.NewEncoder(w)
-	// e.Encode(rf.xxx)
-	// e.Encode(rf.yyy)
-	// data := w.Bytes()
-	// rf.persister.SaveRaftState(data)
+	w := new(bytes.Buffer)
+	e := labgob.NewEncoder(w)
+	e.Encode(rf.currentTerm)
+	e.Encode(rf.votedFor)
+	e.Encode(rf.logs)
+	data := w.Bytes()
+	rf.persister.SaveRaftState(data)
+
 }
 
 // restore previously persisted state.
@@ -130,17 +135,21 @@ func (rf *Raft) readPersist(data []byte) {
 	}
 	// Your code here (2C).
 	// Example:
-	// r := bytes.NewBuffer(data)
-	// d := labgob.NewDecoder(r)
-	// var xxx
-	// var yyy
-	// if d.Decode(&xxx) != nil ||
-	//    d.Decode(&yyy) != nil {
-	//   error...
-	// } else {
-	//   rf.xxx = xxx
-	//   rf.yyy = yyy
-	// }
+	r := bytes.NewBuffer(data)
+	d := labgob.NewDecoder(r)
+	var currentTerm int
+	var votedFor int
+	var logs []LogEntry
+
+	if d.Decode(&currentTerm) != nil ||
+		d.Decode(&votedFor) != nil ||
+		d.Decode(&logs) != nil {
+		log.Fatal("rf read persist err")
+	} else {
+		rf.currentTerm = currentTerm
+		rf.votedFor = votedFor
+		rf.logs = logs
+	}
 }
 
 // the service using Raft (e.g. a k/v server) wants to start
@@ -168,6 +177,7 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 	} else {
 		index = len(rf.logs) // the idx that the command will appear at
 		rf.logs = append(rf.logs, LogEntry{command, rf.currentTerm})
+		rf.persist()
 		DPrintf("leader %v receives a new log entry, the command is %d, idx is %v\n", rf.me, command, index)
 		term = rf.currentTerm
 		isLeader = true
@@ -262,9 +272,9 @@ func (rf *Raft) ticker() {
 }
 
 func (rf *Raft) StableHeartbeatTimeout() time.Duration {
-	return time.Duration(100 * time.Millisecond)
+	return time.Duration(50 * time.Millisecond)
 }
 
 func (rf *Raft) RandomizedElectionTimeout() time.Duration {
-	return time.Duration(time.Duration(200+rand.Intn(150)) * time.Millisecond)
+	return time.Duration(time.Duration(150+rand.Intn(150)) * time.Millisecond)
 }

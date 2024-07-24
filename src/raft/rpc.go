@@ -58,6 +58,7 @@ func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 		rf.currentTerm = args.Term
 		rf.votedFor = -1
 		rf.currentState = Follower
+		rf.persist()
 	}
 
 	// 前面的term的检查，是每个收到的requestVote，都必须handle的
@@ -72,6 +73,7 @@ func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 			reply.Term = rf.currentTerm
 			rf.votedFor = args.CandidateId
 			rf.electionTimer.Reset(rf.RandomizedElectionTimeout())
+			rf.persist()
 		}
 	}
 }
@@ -103,6 +105,7 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 		rf.currentTerm = reply.Term
 		rf.votedFor = -1
 		rf.currentState = Follower
+		rf.persist()
 	}
 
 	rf.electionTimer.Reset(rf.RandomizedElectionTimeout())
@@ -140,7 +143,7 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 			DPrintf("Follower %d delete a old command %v and re-add it\n", rf.me, entry)
 		}
 	}
-
+	rf.persist()
 	// commitIdx更新，并更新lastApplied
 	last_idx = len(rf.logs) - 1
 	if args.LeaderCommit > rf.commitIndex {

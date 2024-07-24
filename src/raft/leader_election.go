@@ -10,6 +10,7 @@ func (rf *Raft) leaderElection() {
 	rf.currentTerm++
 	rf.currentState = Candidate
 	rf.votedFor = rf.me
+	rf.persist()
 
 	grantedVoteCnt := 1
 	last_log_index := len(rf.logs) - 1
@@ -44,6 +45,7 @@ func (rf *Raft) leaderElection() {
 				rf.currentTerm = reply.Term
 				rf.votedFor = -1
 				rf.currentState = Follower
+				rf.persist()
 				return
 			}
 			if reply.VoteGranted {
@@ -110,7 +112,6 @@ func (rf *Raft) leaderAppendEntry(peerId int, sendHeartBeat bool) {
 	// 如果不对，return false 那么leader就会decrement nextIndex[peerId]
 	prev_log_idx := rf.nextIndex[peerId] - 1
 	prev_log_term := rf.logs[prev_log_idx].Term
-	record_n_log := len(rf.logs)
 	args := AppendEntriesArgs{rf.currentTerm, rf.me, prev_log_idx, prev_log_term, []LogEntry{}, rf.commitIndex}
 	reply := AppendEntriesReply{}
 	// follower i 应该增加的条目是:从 nextIndex[peerId]开始，到last log index结束的所有logentry
@@ -144,6 +145,7 @@ func (rf *Raft) leaderAppendEntry(peerId int, sendHeartBeat bool) {
 		rf.currentTerm = reply.Term
 		rf.votedFor = -1
 		rf.currentState = Follower
+		rf.persist()
 		// 一定要手动unlock
 		rf.mu.Unlock()
 		return
@@ -152,8 +154,9 @@ func (rf *Raft) leaderAppendEntry(peerId int, sendHeartBeat bool) {
 	// 如果成功，说明完全同步了（任何不同步的log entry，以及所有之后的entry都删掉了
 	if reply.Success {
 		// success, update nextIndex and matchIndex for follower
-		rf.nextIndex[peerId] = record_n_log      // 就是当前leader的log最大idx + 1
-		rf.matchIndex[peerId] = record_n_log - 1 // 就是当前leader的log最大idx
+		rf.matchIndex[peerId] = args.PrevLogIndex + len(args.Entries) // peerId确定添加的log的最后的idx
+		rf.nextIndex[peerId] = rf.matchIndex[peerId] + 1              // peerId接下来要添加的log的idx
+
 		if sendHeartBeat {
 			DPrintf("Leader %d update the follower %d via heartbeat, now it's nextIndex is %d\n", rf.me, peerId, rf.nextIndex[peerId])
 		} else {
@@ -184,6 +187,9 @@ func (rf *Raft) leaderAppendEntry(peerId int, sendHeartBeat bool) {
 		rf.lastApplied = max(rf.lastApplied, rf.commitIndex)
 	} else {
 		rf.nextIndex[peerId]--
+		if rf.nextIndex[peerId] == 0 {
+			rf.nextIndex[peerId] = 1
+		}
 		DPrintf("peer %d's nextIndex decrement to %d\n", peerId, rf.nextIndex[peerId])
 		if rf.nextIndex[peerId] < 0 {
 			log.Fatalf("peer %d nextIndex in leader %d is smaller than 0\n", peerId, rf.me)
@@ -197,6 +203,7 @@ func (rf *Raft) leaderAppendEntry(peerId int, sendHeartBeat bool) {
 func (rf *Raft) transferToLeader() {
 	rf.votedFor = -1
 	rf.currentState = Leader
+	rf.persist()
 	// reinitialize nextIndex[] and matchIndex[]
 	// TODO reinitialize every idx in nextIndex[] to leader last log index + 1
 	// DPrintf("rf.nextIndex is: %d\n", len(rf.logs))
