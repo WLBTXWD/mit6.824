@@ -272,7 +272,7 @@ func (rf *Raft) ticker() {
 }
 
 func (rf *Raft) StableHeartbeatTimeout() time.Duration {
-	return time.Duration(50 * time.Millisecond)
+	return time.Duration(55 * time.Millisecond)
 }
 
 func (rf *Raft) RandomizedElectionTimeout() time.Duration {
